@@ -1,0 +1,134 @@
+body{
+    background-color:#adc59e;
+}
+.gameName{
+    text-align: center;
+    color:orange;
+}
+#score{
+    display:flex;
+    justify-content:center;
+}
+.lives{
+    display: flex;
+    justify-content:center;
+}
+.lives img{
+    position: relative;
+    top:10px;
+    padding-left:5px;
+}
+.inputText{
+    display:inline-block;
+    width:auto;
+    margin-left:45%;
+    margin-top:5%;
+}
+.inputText input{
+    height:25px;
+}
+.submitButton{
+    display:inline-block;
+    width:auto;
+    margin-left:45%;
+    margin-top:2%;
+}
+.submitButton button{
+    height:30px;
+    width:150px;
+    background-color: rgb(72, 37, 134);
+    color:white;
+    border:thick solid rgb(72,37,134);
+    border-radius:25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.submitButton button:hover{
+    background-color: white;
+    color:rgb(72,37,134);
+    border: thick solid white;
+}
+.resetGame{
+    display:inline-block;
+    margin-left:45%;
+    margin-top:2%;
+    
+}
+.resetGame button{
+    height: 30px;
+    width: 150px;
+    background-color: black;
+    color:white;
+    border:thick solid black;
+    border-radius: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.resetGame button:hover{
+    background-color: white;
+    color:black;
+    border:thick solid white;
+}
+.Letters img{
+    width:128px;
+    height:128px;
+}
+.Letters{
+    display:inline-block;
+    margin-left:25%;
+}
+.letterB{
+    display:inline-block;
+    height:128px;
+    width:128px;
+    border-radius: 10px;
+    background-color: #3b88c3;
+    margin-right:20px;
+}
+.letterL{
+    display:inline-block;
+    height:128px;
+    width:128px;
+    border-radius: 10px;
+    background-color: #3b88c3;
+    margin-right:20px;
+}
+.letterA{
+    display:inline-block;
+    height:128px;
+    width:128px;
+    border-radius: 10px;
+    background-color: #3b88c3;
+    margin-right:20px;
+}
+.letterS{
+    display:inline-block;
+    height:128px;
+    width:128px;
+    border-radius: 10px;
+    background-color: #3b88c3;
+    margin-right:20px;
+}
+.letterT{
+    display:inline-block;
+    height:128px;
+    width:128px;
+    border-radius: 10px;
+    background-color: #3b88c3;
+}
+#letterB{
+    opacity: 0;
+}
+#letterL{
+    opacity: 0;
+}
+#letterA{
+    opacity: 0;
+}
+#letterS{
+    opacity: 0;
+}
+#letterT{
+    opacity: 0;
+}
+.menu{
+    text-align: center;
+}

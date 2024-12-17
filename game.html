@@ -1,11 +1,62 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel ="stylesheet" type ="text/css" href="styles4game.css">
         <title>game lol</title>
+        
     </head>
     <body>
-        <h1>
-            hello this is our cool game
-        </h1>
+        <div class="container">
+            <div class="gameName">
+                <h1>
+                    Word Prediction Game
+                </h1>
+            </div>
+            <div class="game">
+                <div class="Letters">
+                    <div class="letterB">
+                        <img id="letterB" src="assets/letter-b.svg">
+                    </div>
+                    <div class="letterL">
+                        <img id="letterL" src="assets/letter-l.svg">
+                    </div>
+                    <div class="letterA">
+                        <img id="letterA" src="assets/letter-a.svg">
+                    </div>
+                    <div class="letterS">
+                        <img id="letterS"src="assets/letter-s.svg">
+                    </div>
+                    <div class="letterT">
+                        <img id="letterT"src="assets/letter-t.svg">
+                    </div>    
+                </div>
+                
+                 <div class="inputText">
+                    Prediction:
+                    <input id="inputText"type="text" size="5">
+                </div>
+                 <div class="submitButton">
+                    <button onclick="increaseNumber()" id="submitbutton">Submit</button>
+                </div>
+                <div class="resetGame">    
+                    <button onclick="resetGame()"id="resetgame">Reset the game</button>
+                </div>
+                <div class="status">
+                    <div id="score">
+                        Score: 0
+                    </div>
+                    <div class="lives">
+                        Lives:
+                        <img id="heart1" src="assets/heart.svg"
+                            style="height:32px;width:32px">
+                        <img id="heart2" src="assets/heart.svg"
+                            style="height:32px;width:32px">
+                        <img id="heart3" src="assets/heart.svg"
+                            style="height:32px;width:32px">
+                    </div>
+                </div>
+            </div>
+         </div>
+        <script src="script4game.js"></script>
     </body>
 </html>
