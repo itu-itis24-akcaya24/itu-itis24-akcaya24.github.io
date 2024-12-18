@@ -5,8 +5,15 @@ let isL = false;
 let isA = false;
 let isS = false;
 let isT = false;
+const inputText = document.getElementById("inputText");
+// man i wish i used this at the start instead of typing the veeery long getElementById stuff
 function increaseNumber(){
-    if(document.getElementById("inputText").value=="BLAST"){
+    if(document.getElementById("inputText").value[0]=='B' || document.getElementById("inputText").value[0]=='b'&&
+    document.getElementById("inputText").value[1]=='L' || document.getElementById("inputText").value[1]=='l'&&
+    document.getElementById("inputText").value[2]=='A' || document.getElementById("inputText").value[2]=='a'&&
+    document.getElementById("inputText").value[3]=='S' || document.getElementById("inputText").value[3]=='s'&&
+    document.getElementById("inputText").value[4]=='T' || document.getElementById("inputText").value[4]=='t')
+    {
         count = 100;
         document.getElementById("letterB").style.opacity=1;
         document.getElementById("letterL").style.opacity=1;
@@ -43,17 +50,27 @@ function increaseNumber(){
         lives = 0;
     }
     else{
-        lives = lives - 1;
+        if(inputText.value=='B' || inputText.value=='b' || inputText.value=='L' || inputText.value=='l' || inputText.value=='A' || inputText.value=='a' ||
+            inputText.value=='S' || inputText.value=='s' || inputText.value=='T' || inputText.value=='t')
+        {
+            console.log("dont type the same thing bruh");
+        }
+        else{
+        lives -= 1;
+        }
     }
 
     if(count==100 && lives>0){
         document.getElementById("victory-message").innerHTML="congrats u won";
         document.getElementById("victory-message").style.color="black";
+        document.getElementById("submitbutton").disabled = true;
+        document.getElementById("inputText").disabled = true;
     }
     if(lives==0){
         document.getElementById("victory-message").innerHTML="you lost, restart the game";
         document.getElementById("victory-message").style.color="black";
-
+        document.getElementById("submitbutton").disabled = true;
+        document.getElementById("inputText").disabled = true;
     }
 
     switch(lives){
@@ -108,5 +125,8 @@ function resetGame(){
     document.getElementById("inputText").value="";
     
     document.getElementById("victory-message").style.color="transparent";
+
+    document.getElementById("submitbutton").disabled = false;
+    document.getElementById("inputText").disabled = false;
 
 }
