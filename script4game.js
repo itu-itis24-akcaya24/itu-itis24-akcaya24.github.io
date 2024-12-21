@@ -5,48 +5,56 @@ let isL = false;
 let isA = false;
 let isS = false;
 let isT = false;
+
+const letterB = document.getElementById("letterB");
+const letterL = document.getElementById("letterL");
+const letterA = document.getElementById("letterA");
+const letterS = document.getElementById("letterS");
+const letterT = document.getElementById("letterT");
+
+const infoMessage = document.getElementById("victory-message");
 const inputText = document.getElementById("inputText");
-// man i wish i used this at the start instead of typing the veeery long getElementById stuff
+
 function increaseNumber(){
-    if(document.getElementById("inputText").value[0]=='B' || document.getElementById("inputText").value[0]=='b'&&
-    document.getElementById("inputText").value[1]=='L' || document.getElementById("inputText").value[1]=='l'&&
-    document.getElementById("inputText").value[2]=='A' || document.getElementById("inputText").value[2]=='a'&&
-    document.getElementById("inputText").value[3]=='S' || document.getElementById("inputText").value[3]=='s'&&
-    document.getElementById("inputText").value[4]=='T' || document.getElementById("inputText").value[4]=='t')
+    if(inputText.value[0]=='B' || inputText.value[0]=='b'&&
+    inputText.value[1]=='L' || inputText.value[1]=='l'&&
+    inputText.value[2]=='A' || inputText.value[2]=='a'&&
+    inputText.value[3]=='S' || inputText.value[3]=='s'&&
+    inputText.value[4]=='T' || inputText.value[4]=='t')
     {
         count = 100;
-        document.getElementById("letterB").style.opacity=1;
-        document.getElementById("letterL").style.opacity=1;
-        document.getElementById("letterA").style.opacity=1;
-        document.getElementById("letterS").style.opacity=1;
-        document.getElementById("letterT").style.opacity=1;
+        letterB.style.opacity=1;
+        letterL.style.opacity=1;
+        letterA.style.opacity=1;
+        letterS.style.opacity=1;
+        letterT.style.opacity=1;
     }
-    else if(document.getElementById("inputText").value=='B'|| document.getElementById("inputText").value=='b' && !isB){
+    else if(inputText.value=='B'|| inputText.value=='b' && !isB){
         count = count + 20;
-        document.getElementById("letterB").style.opacity=1;
+        letterB.style.opacity=1;
         isB = true;
     }
-    else if(document.getElementById("inputText").value=='L'||document.getElementById("inputText").value=='l' && !isL){
+    else if(inputText.value=='L'||inputText.value=='l' && !isL){
         count = count + 20;
-        document.getElementById("letterL").style.opacity=1;
+        letterL.style.opacity=1;
         isL = true;
     }
-    else if(document.getElementById("inputText").value=='A'||document.getElementById("inputText").value=='a' && !isA){
+    else if(inputText.value=='A'||inputText.value=='a' && !isA){
         count = count + 20;
-        document.getElementById("letterA").style.opacity=1;
+        letterA.style.opacity=1;
         isA = true;
     }
-    else if(document.getElementById("inputText").value=='S'||document.getElementById("inputText").value=='s' && !isS){
+    else if(inputText.value=='S'||inputText.value=='s' && !isS){
         count = count + 20;
-        document.getElementById("letterS").style.opacity=1;
+        letterS.style.opacity=1;
         isS = true;
     }
-    else if(document.getElementById("inputText").value=='T'||document.getElementById("inputText").value=='t' && !isT){
+    else if(inputText.value=='T'||inputText.value=='t' && !isT){
         count = count + 20;
-        document.getElementById("letterT").style.opacity=1;
+        letterT.style.opacity=1;
         isT = true;
     }
-    else if(document.getElementById("inputText").value.length>1){
+    else if(inputText.value.length>1){
         lives = 0;
     }
     else{
@@ -54,6 +62,8 @@ function increaseNumber(){
             inputText.value=='S' || inputText.value=='s' || inputText.value=='T' || inputText.value=='t')
         {
             console.log("dont type the same thing bruh");
+            infoMessage.style.color="black";
+            infoMessage.textContent="Please dont type the same letter.";
         }
         else{
         lives -= 1;
@@ -61,16 +71,16 @@ function increaseNumber(){
     }
 
     if(count==100 && lives>0){
-        document.getElementById("victory-message").innerHTML="congrats u won";
-        document.getElementById("victory-message").style.color="black";
+        infoMessage.textContent="You won!";
+        infoMessage.style.color= "green";
         document.getElementById("submitbutton").disabled = true;
-        document.getElementById("inputText").disabled = true;
+        inputText.disabled = true;
     }
     if(lives==0){
-        document.getElementById("victory-message").innerHTML="you lost, restart the game";
-        document.getElementById("victory-message").style.color="black";
+        infoMessage.textContent="You lost, restart the game.";
+        infoMessage.style.color="red";
         document.getElementById("submitbutton").disabled = true;
-        document.getElementById("inputText").disabled = true;
+        inputText.disabled = true;
     }
 
     switch(lives){
@@ -97,7 +107,7 @@ function increaseNumber(){
     }
 
     document.getElementById("score").innerHTML ="Score: " + count;
-    document.getElementById("inputText").value="";
+    inputText.value="";
     document.getElementById("resetgame").style.display="unset";
 }
 function resetGame(){
@@ -116,17 +126,17 @@ function resetGame(){
 
     document.getElementById("score").innerHTML = "Score: "+count;
 
-    document.getElementById("letterB").style.opacity = 0;
-    document.getElementById("letterL").style.opacity=0;
-    document.getElementById("letterA").style.opacity=0;
-    document.getElementById("letterS").style.opacity=0;
-    document.getElementById("letterT").style.opacity = 0;
+    letterB.style.opacity = 0;
+    letterL.style.opacity=0;
+    letterA.style.opacity=0;
+    letterS.style.opacity=0;
+    letterT.style.opacity = 0;
 
-    document.getElementById("inputText").value="";
+    inputText.value="";
     
-    document.getElementById("victory-message").style.color="transparent";
+    infoMessage.style.color="transparent";
 
     document.getElementById("submitbutton").disabled = false;
-    document.getElementById("inputText").disabled = false;
+    inputText.disabled = false;
 
 }

@@ -1,19 +1,38 @@
 <!DOCTYPE html>
     <head>
-        <title>hello</title>
+        <title>About Me</title>
+        <link rel ="stylesheet" type ="text/css" href="styles.css">
     </head>
     <body>
         <h1>
             About Me:
         </h1>
-        <p>
+        <p class="bio">
             Hello, my name is Ahmet Arif Akçay.
             I'm an undergraduate computer engineering student
             at Istanbul Technical University
         </p>
-        <img src="assets/some1.jpg" alt="picture of me" style="width:128px;height:128px">
-        <a href="game.html" target="_blank">
-            Link to Word Prediction Game
-        </a>
+        <div class="interests">
+            My academic interests are:
+            <ul>
+                <li>
+                    computer architecture
+                </li>
+                <li>
+                    software engineering
+                </li>
+                <li>
+                    Robotics
+                </li>
+            </ul>
+        </div>
+        <div id="imageBox">
+            <img id="image"src="assets/some1.jpg" alt="picture of me" style="width:128px;height:128px">
+        </div>
+        <div class="gameBox">
+            <a href="game.html" target="_blank">
+                Click to play the Word Prediction Game
+            </a>
+        </div>
     </body>
 </HTML>

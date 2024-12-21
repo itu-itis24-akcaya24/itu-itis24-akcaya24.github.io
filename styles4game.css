@@ -44,15 +44,15 @@ body{
 .submitButton button{
     height:30px;
     width:150px;
-    background-color: rgb(72, 37, 134);
+    background-color: rgb(239, 179, 124);
     color:white;
-    border:thick solid rgb(72,37,134);
+    border:thick solid rgb(239, 179, 124);
     border-radius:25px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 .submitButton button:hover{
     background-color: white;
-    color:rgb(72,37,134);
+    color:rgb(239, 179, 124);
     border: thick solid white;
 }
 .resetGame{
@@ -66,15 +66,15 @@ body{
     display:none;
     height: 30px;
     width: 150px;
-    background-color: black;
+    background-color: rgb(201, 164, 44);
     color:white;
-    border:thick solid black;
+    border:thick solid rgb(201,164,44);
     border-radius: 25px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .resetGame button:hover{
     background-color: white;
-    color:black;
+    color:rgb(201,164,44);
     border:thick solid white;
 }
 .Letters img{
