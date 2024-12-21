@@ -16,11 +16,11 @@ const infoMessage = document.getElementById("victory-message");
 const inputText = document.getElementById("inputText");
 
 function increaseNumber(){
-    if(inputText.value[0]=='B' || inputText.value[0]=='b'&&
-    inputText.value[1]=='L' || inputText.value[1]=='l'&&
-    inputText.value[2]=='A' || inputText.value[2]=='a'&&
-    inputText.value[3]=='S' || inputText.value[3]=='s'&&
-    inputText.value[4]=='T' || inputText.value[4]=='t')
+    if((inputText.value[0]=='B' || inputText.value[0]=='b')&&
+    (inputText.value[1]=='L' || inputText.value[1]=='l')&&
+    (inputText.value[2]=='A' || inputText.value[2]=='a')&&
+    (inputText.value[3]=='S' || inputText.value[3]=='s')&&
+    (inputText.value[4]=='T' || inputText.value[4]=='t'))
     {
         count = 100;
         letterB.style.opacity=1;
