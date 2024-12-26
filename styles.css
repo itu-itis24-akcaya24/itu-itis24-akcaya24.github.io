@@ -16,19 +16,20 @@ h1{
 .interests{
     border:thick solid peru;
     background-color: rgb(152, 226, 193);
+    margin-left:5%;
 }
 .bio{
     height:106px;
     background-color: lemonchiffon;
-    position:relative;
-    bottom:15px;
     border:5px solid lightblue;
+    margin:auto;
+    margin-left:2%;
 }
 #imageBox{
-    margin:2%;
-}
-#imageBox img{
-    margin-top:3%;
+    display: inline-block;
+    text-align:center;
+    margin-top:2%;
+    width:100%;
 }
 .gameBox{
     margin-top:2%;
